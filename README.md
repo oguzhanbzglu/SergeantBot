@@ -24,7 +24,6 @@ ROS packages for simulating a vehicle with Ackermann steering
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/oguzhanbzglu/SergeantBot.git
-sudo apt install ros-noetic-ackermann-msgs
 cd ~/catkin_ws
 catkin_make
 ```
