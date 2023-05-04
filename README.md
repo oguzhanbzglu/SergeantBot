@@ -4,7 +4,7 @@ SergeantBot, I am working on an autonomous controlled vehicle project for my eng
 
 To apply Ackermann steering to an autonomous mobile robot, the desired turning radius must first be determined based on the robot's characteristics and operational requirements. Then, the steering angles for the front wheels can be calculated using the following formulas:
 
-![Test run steering terminal](images/ackermann_steering.jpg)
+![Test run steering terminal](ackermann_vehicle/images/ackermann_steering.jpg)
 
 
 
