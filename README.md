@@ -1,35 +1,16 @@
 # SergeantBot
 
-In Robotic Operating System (ROS) and robot simulator Gazebo, there is no official package to simulate the Ackerman motion. The existing open-source github was build over many sources and it is outdated. Furthermore, the package could not be run in the latest version of ROS. It gave the compilation errors due to the non-compatibility of versions.
+SergeantBot, I am working on an autonomous controlled vehicle project for my engineering department thesis using the ROS (Robot Operating System) software. The robot uses the Ackermann Steering method for its motion. Ackermann Steering is a type of steering mechanism commonly used in vehicles and mobile robots, including autonomous mobile robots. It is based on the principle that the inner wheel turns at a smaller angle than the outer wheel during a turn, resulting in both wheels following circular paths with different radii. This method provides stability and facilitates control of the vehicle or robot by preventing slipping. The main formulation of the Ackermann steering involves calculating the steering angles for the front wheels based on the desired turning radius and the vehicle's geometry. The steering angles are typically expressed as a function of the wheelbase (the distance between the front and rear axles) and the track width (the distance between the centers of the front wheels).
 
-We manage to update our Github repo with the latest version that works with the current version of ROS based on the previous research works. Melodic and Noetic were tested by our team. 
+To apply Ackermann steering to an autonomous mobile robot, the desired turning radius must first be determined based on the robot's characteristics and operational requirements. Then, the steering angles for the front wheels can be calculated using the following formulas:
 
-The repaired version was uploaded to our Github. You can download it and improvise it if you want. Please provide a pull request just in case you have an improved version of the code. 
+![Test run steering terminal](images/ackermann_steering.jpg)
 
-# This package is updated from original source to simulate the motion of the Ackerman drive in Gazebo
 
-Since most of the previous repo used previous version of ROS, I faced compilation error in ROS Noetic version running Ubuntu 20.04. 
-Some of the launch file issues due to the newer ROS version affected the launch file. The issue can be seen here:
 
-https://answers.ros.org/question/122021/xacro-problem-invalid-param-tag-cannot-load-command-parameter-robot_description/
 
 # Tested version: 
-
-1. ROS Noetic running Ubuntu 20.04
-2. ROS Melodic running Ubuntu 18.04
-
-If you face running error in Python (for ROS Melodic) you can try to change the heading of the Python to Python3 in Python files. 
-
-Change from this: 
-```
-#!/usr/bin/env python
-```
-
-To this: 
-```
-#!/usr/bin/env python3
-```
-
+ROS Noetic running Ubuntu 20.04
 
 
 
@@ -40,28 +21,18 @@ ROS packages for simulating a vehicle with Ackermann steering
 
 # This package is for developers only. 
 
-## Installation (Noetic)
+## Installation
 ```
 cd ~/catkin_ws/src
-git clone https://github.com/aizzat/ackermann_vehicle/
+git clone https://github.com/oguzhanbzglu/SergeantBot.git
 sudo apt install ros-noetic-ackermann-msgs
 cd ~/catkin_ws
-rosdep install --from-paths src --ignore-src -r -y
 catkin_make
 ```
 
-## Installation (Melodic)
-```
-cd ~/catkin_ws/src
-git clone https://github.com/aizzat/ackermann_vehicle/
-sudo apt install ros-melodic-ackermann-msgs
-cd ~/catkin_ws
-rosdep install --from-paths src --ignore-src -r -y
-catkin_make
-```
 
-## Running
-`roslaunch ackermann_vehicle_gazebo ackermann_vehicle_noetic.launch`
+## Running 
+`roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch`
 
 ## To test the steering command: 
 
@@ -79,7 +50,7 @@ This python file will wait for /cmd_vel inputs. You can test it with another ter
 rostopic pub -r 10 /cmd_vel geometry_msgs/Twist  '{linear:  {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.2}}'
 ```
 
-![Test run steering terminal](images/testrunackermann.jpg)
+![Test run steering terminal](images/ackermann_steering.jpg)
 
 # Video - Please click on the image
 [![Watch the video](https://img.youtube.com/vi/nZZEMrxxz2o/maxresdefault.jpg)](https://youtu.be/nZZEMrxxz2o)
