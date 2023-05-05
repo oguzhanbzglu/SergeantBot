@@ -34,7 +34,7 @@ To apply Ackermann steering to an autonomous mobile robot, the desired turning r
 
 The path was given as a trajectory data.
 
-![sergeant_gazebo](/images/sergeant_gazebo.png)
+![sergeant_gazebo](images/sergeant_gazebo.png)
 
 
 ![Husky_path](images/husky_gazebo.png)
