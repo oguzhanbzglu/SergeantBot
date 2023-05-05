@@ -91,6 +91,6 @@ $ rosrun ackermann_vehicle_navigation path_follower.py
 [![Watch the video](ackermann_vehicle/images/followers_path.png)](https://youtu.be/c5ZcQJwzZ2Y)
 
 ### Steering test of the robot (Click the image to see video)
-[![Watch the video](ackermann_vehicle/images/the_robot.png)](https://youtu.be/c5ZcQJwzZ2Y)
+[![Watch the video](ackermann_vehicle/images/the_robot.jpeg)](https://youtu.be/c5ZcQJwzZ2Y)
 
 
