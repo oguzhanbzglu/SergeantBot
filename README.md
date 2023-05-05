@@ -7,12 +7,36 @@ To apply Ackermann steering to an autonomous mobile robot, the desired turning r
 ![Ackermann Steering](ackermann_vehicle/images/ackermann_steering.jpeg)
 ![Formula](ackermann_vehicle/images/formula.jpeg)
 
+## Software
+- Ubuntu 20.04
+- ROS | Noetic
+- Python 3
+
+## Hardware
+- Raspberry Pi Model 3B+
+- YD LIDAR 2X
+- MPU 6050 Gyro Sensor
+- 12V DC Motor
+- Servo Motor
+- PCA 9685 Servo Driver
+- LM393 Motor Speed Sensor (I use that as an encoder with encoder wheel)
+- Hobbywing Quickrun 1060 ESC
+- 5200mAh Battery
 
 
-# Tested version: 
-ROS Noetic running Ubuntu 20.04
+## Robot
 
+![Sergeantbot](ackermann_vehicle/images/sergeantbot.jpeg)
 
+## Path Follower 
+
+The path was given as a trajectory data.
+
+![Path](ackermann_vehicle/images/path.jpeg)
+![Sergeant_path](ackermann_vehicle/images/path_gazebo.jpeg)
+![Husky_path](ackermann_vehicle/images/husky_gazebo.jpeg)
+
+#TESTS
 
 ackermann_vehicle
 =================
@@ -20,7 +44,7 @@ ackermann_vehicle
 ROS packages for simulating a vehicle with Ackermann steering
 
 
-## Installation
+### Installation
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/oguzhanbzglu/SergeantBot.git
@@ -29,10 +53,10 @@ catkin_make
 ```
 
 
-## Running 
+### Running 
 `roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch`
 
-## To test the steering command: 
+#### To test the steering command: 
 
 ```
 #go to terminal to this python directory:
@@ -46,6 +70,18 @@ This python file will wait for /cmd_vel inputs. You can test it with another ter
 
 ```
 rostopic pub -r 10 /cmd_vel geometry_msgs/Twist  '{linear:  {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.2}}'
+```
+
+## Run the path follower
+
+```
+#run each commands different terminals (yeah I should create a launch file :D )
+$ rosrun ackermann_vehicle_navigation tf_odom_publisher.py
+$ rosrun ackermann_vehicle_navigation cmd_vel_to_ackermann_drive.py
+$ rosrun ackermann_vehicle_navigation path_publisher.py
+```
+```
+$ rosrun ackermann_vehicle_navigation path follower.py
 ```
 
 ![Test run steering terminal](ackermann_vehicle/images/ackermann_steering.jpg)
