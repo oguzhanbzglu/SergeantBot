@@ -88,7 +88,7 @@ $ rosrun ackermann_vehicle_navigation path_publisher.py
 $ rosrun ackermann_vehicle_navigation path_follower.py
 ```
 ### Testing robot in Gazebo (Click the image to see video)
-[![Watch the video](ackermann_vehicle/images/followers_path.png)](https://youtu.be/c5ZcQJwzZ2Y)
+[![Watch the video](ackermann_vehicle/images/followers_path.png)](https://youtu.be/u6-OWd0uj58)
 
 ### Steering test of the robot (Click the image to see video)
 [![Watch the video](ackermann_vehicle/images/the_robot.jpeg)](https://youtu.be/c5ZcQJwzZ2Y)
