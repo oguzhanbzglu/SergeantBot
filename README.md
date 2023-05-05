@@ -26,20 +26,23 @@ To apply Ackermann steering to an autonomous mobile robot, the desired turning r
 
 ## Robot
 
-![Sergeantbot](ackermann_vehicle/images/sergeantbot.jpeg)
+![Sergeantbot](ackermann_vehicle/images/sergeantbot.png)
+![Sergeantbot](ackermann_vehicle/images/sergeantbot2.png)
+
 
 ## Path Follower 
 
 The path was given as a trajectory data.
 
-![Path](ackermann_vehicle/images/path.jpeg)
-![Sergeant_path](ackermann_vehicle/images/path_gazebo.jpeg)
-![Husky_path](ackermann_vehicle/images/husky_gazebo.jpeg)
+![sergeant_gazebo](ackermann_vehicle/images/sergeant_gazebo.png)
 
-#TESTS
 
-ackermann_vehicle
-=================
+![Husky_path](ackermann_vehicle/images/husky_gazebo.png)
+![Sergeant_path](ackermann_vehicle/images/path_gazebo.png)
+
+
+
+# TESTS
 
 ROS packages for simulating a vehicle with Ackermann steering
 
@@ -76,15 +79,17 @@ rostopic pub -r 10 /cmd_vel geometry_msgs/Twist  '{linear:  {x: 0.1, y: 0.0, z: 
 
 ```
 #run each commands different terminals (yeah I should create a launch file :D )
+#when you run the .launch file if the path is different you are able to change the world based on the name in /ackermann_vehicle_gazebo/worlds
 $ rosrun ackermann_vehicle_navigation tf_odom_publisher.py
 $ rosrun ackermann_vehicle_navigation cmd_vel_to_ackermann_drive.py
 $ rosrun ackermann_vehicle_navigation path_publisher.py
 ```
 ```
-$ rosrun ackermann_vehicle_navigation path follower.py
+$ rosrun ackermann_vehicle_navigation path_follower.py
 ```
+### Testing robot in Gazebo
+![Test run steering terminal](ackermann_vehicle/images/test_robot.mp4)
 
-![Test run steering terminal](ackermann_vehicle/images/ackermann_steering.jpg)
+### Steering test of the robot
+![Test run steering terminal](ackermann_vehicle/images/path_follower.mp4)
 
-# Video - Please click on the image
-[![Watch the video](https://img.youtube.com/vi/nZZEMrxxz2o/maxresdefault.jpg)](https://youtu.be/nZZEMrxxz2o)
