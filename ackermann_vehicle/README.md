@@ -4,8 +4,8 @@ SergeantBot, I am working on an autonomous controlled vehicle project for my eng
 
 To apply Ackermann steering to an autonomous mobile robot, the desired turning radius must first be determined based on the robot's characteristics and operational requirements. Then, the steering angles for the front wheels can be calculated using the following formulas:
 
-![Ackermann Steering](images/ackermann_steering.jpeg)
-![Formula](images/formula.jpeg)
+![Ackermann Steering](ackermann_vehicle/images/ackermann_steering.jpeg)
+![Formula](ackermann_vehicle/images/formula.jpeg)
 
 ## Software
 - Ubuntu 20.04
@@ -26,19 +26,19 @@ To apply Ackermann steering to an autonomous mobile robot, the desired turning r
 
 ## Robot
 
-![Sergeantbot](images/sergeantbot.png)
-![Sergeantbot](images/sergeantbot2.png)
+![Sergeantbot](ackermann_vehicle/images/sergeantbot.png)
+![Sergeantbot](ackermann_vehicle/images/sergeantbot2.png)
 
 
 ## Path Follower 
 
 The path was given as a trajectory data.
 
-![sergeant_gazebo](images/sergeant_gazebo.png)
+![sergeant_gazebo](ackermann_vehicle/images/sergeant_gazebo.png)
 
 
-![Husky_path](images/husky_gazebo.png)
-![Sergeant_path](images/path_gazebo.png)
+![Husky_path](ackermann_vehicle/images/husky_gazebo.png)
+![Sergeant_path](ackermann_vehicle/images/path_gazebo.png)
 
 
 
@@ -78,7 +78,7 @@ rostopic pub -r 10 /cmd_vel geometry_msgs/Twist  '{linear:  {x: 0.1, y: 0.0, z: 
 ## Run the path follower
 
 ```
-#run each commands different terminals (yeah I should create a launch file :D )
+#run each command in different terminals (I should create a launch file :D )
 #when you run the .launch file if the path is different you are able to change the world based on the name in /ackermann_vehicle_gazebo/worlds
 $ rosrun ackermann_vehicle_navigation tf_odom_publisher.py
 $ rosrun ackermann_vehicle_navigation cmd_vel_to_ackermann_drive.py
@@ -88,7 +88,7 @@ $ rosrun ackermann_vehicle_navigation path_publisher.py
 $ rosrun ackermann_vehicle_navigation path_follower.py
 ```
 ### Testing robot in Gazebo (Click the image to see video)
-[![Watch the video](images/followers_path.png)](https://youtu.be/u6-OWd0uj58)
+[![Watch the video](ackermann_vehicle/images/followers_path.png)](https://youtu.be/u6-OWd0uj58)
 
 ### Steering test of the robot (Click the image to see video)
-[![Watch the video](images/the_robot.jpeg)](https://youtu.be/c5ZcQJwzZ2Y)
+[![Watch the video](ackermann_vehicle/images/the_robot.jpeg)](https://youtu.be/c5ZcQJwzZ2Y)
