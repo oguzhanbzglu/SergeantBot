@@ -78,7 +78,7 @@ rostopic pub -r 10 /cmd_vel geometry_msgs/Twist  '{linear:  {x: 0.1, y: 0.0, z: 
 ## Run the path follower
 
 ```
-#run each commands different terminals (yeah I should create a launch file :D )
+#run each command in different terminals (I should create a launch file :D )
 #when you run the .launch file if the path is different you are able to change the world based on the name in /ackermann_vehicle_gazebo/worlds
 $ rosrun ackermann_vehicle_navigation tf_odom_publisher.py
 $ rosrun ackermann_vehicle_navigation cmd_vel_to_ackermann_drive.py
