@@ -1,0 +1,9 @@
+<launch>
+
+    <node pkg="idu_robot" type="velocity.py" name="motor_velocity_node" output="screen"/>
+    <node pkg="idu_robot" type="velocity_subscriber.py" name="twist_calculator_node" output="screen"/>
+    <node pkg="idu_robot" type="motor_node.py" name="motor_node" output="screen"/>
+    <node pkg="idu_robot" type="encoder_node.py" name="encoder_node" output="screen"/>
+    <node pkg="idu_robot" type="imu_node_2.py" name="imu_node" output="screen"/>
+</launch>
+
