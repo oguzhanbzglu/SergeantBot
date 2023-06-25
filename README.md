@@ -94,11 +94,17 @@ $ rosrun ackermann_vehicle_navigation path_follower.py
 ### Steering test of the robot (Click the image to see video)
 
 ### Steering Test
+
 ```
-rosrun idurobot control_robot.py
+     |W|
+|A|  |S|  |D|
+
+
+run the roscore in a different terminal then:
+$ rosrun idurobot control_robot.py
 ```
 [![Watch the video](ackermann_vehicle/images/the_robot.jpeg)](https://youtu.be/c5ZcQJwzZ2Y)
 
-[![Terminal print](ackermann_vehicle/images/terminal.jpeg)]
+[![Terminal print](ackermann_vehicle/images/terminal.png)]
 
 
