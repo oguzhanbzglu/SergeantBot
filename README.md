@@ -66,7 +66,6 @@ catkin_make
 ```
 #go to terminal to this python directory:
 #/ackermann_vehicle/ackermann_vehicle_navigation/scripts/
-# /ackermann_vehicle/ackermann_vehicle_navigation/scripts$
 # Run the following commands:
 ./cmd_vel_to_ackermann_drive.py
 ```
@@ -93,6 +92,13 @@ $ rosrun ackermann_vehicle_navigation path_follower.py
 [![Watch the video](ackermann_vehicle/images/followers_path.png)](https://youtu.be/u6-OWd0uj58)
 
 ### Steering test of the robot (Click the image to see video)
+
+### Steering Test
+```
+rosrun idurobot control_robot.py
+```
 [![Watch the video](ackermann_vehicle/images/the_robot.jpeg)](https://youtu.be/c5ZcQJwzZ2Y)
+
+[![Terminal print](ackermann_vehicle/images/terminal.jpeg)]
 
 
